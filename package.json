@@ -1,0 +1,33 @@
+{
+  "name": "@masonite/wp-env-sync",
+  "version": "1.0.3",
+  "description": "A node package to sync lower environments of a production WordPress install.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/masonitedoors/wp-env-sync.git"
+  },
+  "main": "wp-env-sync.js",
+  "bin": {
+    "wp-env-sync": "wp-env-sync.js"
+  },
+  "engineStrict": true,
+  "engines": {
+    "node": ">=8"
+  },
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "chalk": "^2.4.1",
+    "cli-table": "^0.3.1",
+    "commander": "^2.18.0",
+    "node-fetch": "^2.2.0",
+    "shelljs": "^0.8.2",
+    "temp-dir": "^1.0.0",
+    "uuid": "^3.3.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.19.1",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.13.0"
+  }
+}
