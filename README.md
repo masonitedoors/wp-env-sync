@@ -1,11 +1,16 @@
 # WP Env Sync
 
-Sync content of a production WordPress site with its lower environments.
+Sync the content of a production WordPress site with its lower environments.
 
-- Full database sync
-- String search & replace
-- Sync uploads folder
-- Multisite support
+- Syncs database (all `wp_` tables)
+- Syncs uploads directory
+- No limit to the number of lower environments
+- Supports both single installs & multisites
+
+## Requirements
+
+- Node >=8
+- SSH access to all environments
 
 ## Install
 
@@ -52,8 +57,14 @@ wp-env-sync --url=https://mysite.com/projects.json --prod=prd --project=wp_site_
                 "public_path": "/home/wpe-user/sites/siteatst",
                 "private_path": "/home/wpe-user/sites/siteatst/_wpeprivate",
                 "search_replace": [
-                    ["my_production_api_key", "my_staging_api_key"],
-                    ["my_production_api_secret", "my_staging_api_secret"]
+                    [
+                        "my_production_api_key",
+                        "my_staging_api_key"
+                    ],
+                    [
+                        "my_production_api_secret",
+                        "my_staging_api_secret"
+                    ]
                 ]
             },
             {
@@ -63,8 +74,14 @@ wp-env-sync --url=https://mysite.com/projects.json --prod=prd --project=wp_site_
                 "public_path": "/home/wpe-user/sites/siteadev",
                 "private_path": "/home/wpe-user/sites/siteadev/_wpeprivate",
                 "search_replace": [
-                    ["my_production_api_key", "my_development_api_key"],
-                    ["my_production_api_secret", "my_development_api_secret"]
+                    [
+                        "my_production_api_key",
+                        "my_development_api_key"
+                    ],
+                    [
+                        "my_production_api_secret",
+                        "my_development_api_secret"
+                    ]
                 ]
             }
         ]
@@ -119,3 +136,7 @@ wp-env-sync --url=https://mysite.com/projects.json --prod=prd --project=wp_site_
     }
 ]
 ```
+
+## License
+
+MIT © [Masonite](https://www.masonite.com)
