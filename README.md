@@ -1,5 +1,7 @@
 # WP Env Sync
 
+[![npm version](https://badge.fury.io/js/%40masonite%2Fwp-env-sync.svg)](https://www.npmjs.com/package/@masonite/wp-env-sync)
+
 Sync the content of a production WordPress site with its lower environments.
 
 - Syncs database (all `wp_` tables)
