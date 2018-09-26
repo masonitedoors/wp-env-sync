@@ -20,8 +20,6 @@ Sync the content of a production WordPress site with its lower environments.
 npm install -g @masonite/wp-env-sync
 ```
 
-SSH access to the remote environments is required.
-
 ## Usage
 
 Execute sync job:
